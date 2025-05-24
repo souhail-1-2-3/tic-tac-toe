@@ -1,36 +1,93 @@
 body {
-    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #232526 0%, #414345 100%);
+    min-height: 100vh;
+    font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+    color: #e0e0e0;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
     text-align: center;
-    margin-top: 50px;
   }
-
+  
+  h1 {
+    font-size: 2.8rem;
+    letter-spacing: 0.13em;
+    color: #00ffc3;
+    text-shadow: 0 0 12px #00ffc3, 0 0 32px #00ffc3;
+    margin-top: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
   .grid {
     display: grid;
-    grid-template-columns: repeat(3, 100px);
-    grid-gap: 5px;
+    grid-template-columns: repeat(3, 110px);
+    gap: 14px;
     justify-content: center;
-    margin: 20px auto;
+    margin: 30px auto 20px auto;
+    background: rgba(40, 60, 80, 0.45);
+    border-radius: 24px;
+    box-shadow: 0 8px 40px 0 rgba(0,255,170,0.10);
+    padding: 18px;
+    backdrop-filter: blur(8px);
   }
-
+  
   .case {
-    width: 100px;
-    height: 100px;
-    border: 2px solid #333;
-    font-size: 48px;
+    width: 110px;
+    height: 110px;
+    border: 2.5px solid #00ffc3;
+    font-size: 2.8rem;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    transition: background-color 0.3s;
+    background: rgba(0, 255, 195, 0.10);
+    border-radius: 18px;
+    box-shadow: 0 2px 24px 0 rgba(0,255,170,0.10);
+    color: #00ffc3;
+    transition: background 0.3s, box-shadow 0.3s, transform 0.15s;
+    position: relative;
+    overflow: hidden;
   }
-
+  
   .case:hover {
-    background-color: #f0f0f0;
+    background: rgba(0,255,195,0.18);
+    box-shadow: 0 0 32px #00ffc3, 0 4px 24px #222;
+    transform: scale(1.05);
   }
-
+  
   #reset {
-    margin-top: 20px;
-    padding: 10px 20px;
-    font-size: 16px;
+    margin-top: 28px;
+    padding: 0.7rem 2.2rem;
+    font-size: 1.2rem;
+    background: linear-gradient(90deg, #00ffc3 0%, #00bfff 100%);
+    color: #232526;
+    font-weight: bold;
+    border-radius: 32px;
+    border: none;
+    box-shadow: 0 0 16px #00ffc3, 0 2px 8px #222;
     cursor: pointer;
+    letter-spacing: 0.08em;
+    transition: background 0.3s, transform 0.15s, box-shadow 0.3s;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  #reset:hover {
+    filter: brightness(1.15) saturate(1.2);
+    transform: scale(1.08);
+    box-shadow: 0 0 32px #00ffc3, 0 4px 24px #222;
+  }
+  
+  #reset:active {
+    background: linear-gradient(90deg, #00bfff 0%, #00ffc3 100%);
+    filter: brightness(0.95);
+    transform: scale(0.97);
+  }
+  
+  .status {
+    font-size: 1.4rem;
+    color: #00ffc3;
+    margin-top: 1.5rem;
+    text-shadow: 0 0 8px #00ffc3;
+    letter-spacing: 0.08em;
   }
